@@ -4,6 +4,7 @@ Aditya Gupta, 210101009
 Date: 16 April 2024  
 
 ## Files included
+Inputs: *scheduler.cpp*
 
 ## Steps to run
 1) Open the terminal in the project directory.  

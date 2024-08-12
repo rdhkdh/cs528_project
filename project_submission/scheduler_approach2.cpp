@@ -59,10 +59,10 @@ double calculate_cost_ratio(int m)
     return cost_ratio;
 }
 
-// sorts Tasks in decreasing order of failure probability
+// sorts Tasks in increasing order of failure probability
 bool compareByFailureProbability(const Task &a, const Task &b)
 {
-    return a.failure_probability > b.failure_probability;
+    return a.failure_probability < b.failure_probability;
 }
 
 int getRandomInt(int min, int max)

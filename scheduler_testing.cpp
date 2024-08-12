@@ -62,7 +62,7 @@ double calculate_cost_ratio(int m)
 // sorts Tasks in decreasing order of failure probability
 bool compareByFailureProbability(const Task &a, const Task &b)
 {
-    return a.failure_probability > b.failure_probability;
+    return a.failure_probability < b.failure_probability; //changed to increasing
 }
 
 int getRandomInt(int min, int max)
@@ -117,7 +117,7 @@ void generate_random_tasks(vector<User> &users)
             new_task.arrival = arrival_time;
             new_task.execution_time = execution_time;
             new_task.deadline = arrival_time + K;
-            new_task.failure_probability = 0.1 * exp(-failure_rate * double(new_task.execution_time)); // exp(-f*t), where f is the failure rate
+            new_task.failure_probability = 0.1*exp(-failure_rate * double(new_task.execution_time)); // exp(-f*t), where f is the failure rate
 
             // Assign the task to a random user
             int index = rand() % users.size();
